@@ -2,7 +2,7 @@
 
 [Promise] version of [mkdirp]:
 
-> Match files using the patterns the shell uses, like stars and stuff.
+> Like mkdir -p, but in node.js!
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads][npm-downloads]][npm-url]
