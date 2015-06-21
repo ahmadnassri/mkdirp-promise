@@ -22,31 +22,31 @@ npm install --save mkdirp-promise
 var mkdirp = require('mkdirp-promise')
 ```
 
-### mkdirp(pattern [, options])
+### mkdirp(dir, [, options])
 
-*pattern*: `String` (mkdirp pattern)  
+*pattern*: `String`  
 *options*: `Object` or `String`  
 Return: `Object` ([Promise])
 
-When it finishes, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with an `Array` of filenames as its first argument.
+When it finishes, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with the first directory made that had to be created, if any.
 
-When it fails to read the files, it will be [*rejected*](http://promisesaplus.com/#point-30) with an error as its first argument.
+When it fails, it will be [*rejected*](http://promisesaplus.com/#point-30) with an error as its first argument.
 
 ```js
-mkdirp('**/*')
-  .then(function(contents) {
-    contents; //=> ['lorem', 'ipsum', 'dolor']
-  });
+mkdirp('/tmp/foo/bar/baz')
+  .then(function (made) {
+    console.log(made) //=> '/tmp/foo'
+  })
 
-mkdirp('{foo,bar.baz}.txt', { nobrace: true })
-  .then(function(contents) {
-    contents; //=> []
-  });
+  .catch(function (err) {
+    console.error(err)
+  })
+})
 ```
 
 #### options
 
-The option object will be directly passed to [mkdirp](https://github.com/substack/node-mkdirp#options).
+The option object will be directly passed to [mkdirp](https://github.com/substack/node-mkdirp#mkdirpdir-opts-cb).
 
 ## License
 
