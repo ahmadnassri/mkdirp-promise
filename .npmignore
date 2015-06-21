@@ -1,0 +1,5 @@
+.editorconfig
+.jshintrc
+.travis.yml
+test
+test/tmp
