@@ -12,7 +12,7 @@
     "promise"
   ],
   "engines": {
-    "node": ">=0.12"
+    "node": ">=0.10"
   },
   "files": [
     "lib"
@@ -21,7 +21,7 @@
     "url": "https://github.com/ahmadnassri/mkdirp-promise/issues"
   },
   "scripts": {
-    "pretest": "standard && echint",
+    "pretest": "standard && echint --verbose",
     "test": "mocha",
     "posttest": "npm run coverage",
     "coverage": "istanbul cover --dir coverage _mocha -- -R dot",
@@ -42,6 +42,7 @@
     "standard": "^5.1.0"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "pinkie-promise": "^1.0.0"
   }
 }
