@@ -37,7 +37,7 @@
     "echint": "^1.2.0",
     "istanbul": "^0.3.15",
     "mocha": "^2.2.5",
-    "rimraf": "^2.4.0",
+    "rimraf": "^2.5.0",
     "should": "^7.0.1",
     "standard": "^5.1.0"
   },
