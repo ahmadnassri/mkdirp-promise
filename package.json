@@ -32,17 +32,20 @@
       "coverage/**"
     ]
   },
+  "peerDependencies": {
+    "mkdirp": "*"
+  },
   "devDependencies": {
     "codeclimate-test-reporter": "0.1.1",
     "echint": "^1.2.0",
     "istanbul": "^0.3.15",
+    "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
     "rimraf": "^2.4.0",
     "should": "^7.0.1",
     "standard": "^5.1.0"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1",
     "pinkie-promise": "^1.0.0"
   }
 }
