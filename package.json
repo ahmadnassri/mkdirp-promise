@@ -36,16 +36,16 @@
     "mkdirp": "*"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "0.1.1",
-    "echint": "^1.2.0",
-    "istanbul": "^0.3.15",
+    "codeclimate-test-reporter": "0.3.1",
+    "echint": "^1.5.3",
+    "istanbul": "^0.4.2",
     "mkdirp": "^0.5.1",
-    "mocha": "^2.2.5",
-    "rimraf": "^2.4.0",
-    "should": "^7.0.1",
-    "standard": "^5.1.0"
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2",
+    "should": "^8.2.2",
+    "standard": "^6.0.8"
   },
   "dependencies": {
-    "pinkie-promise": "^1.0.0"
+    "pinkie-promise": "^2.0.0"
   }
 }
