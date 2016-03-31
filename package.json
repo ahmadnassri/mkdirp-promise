@@ -33,7 +33,7 @@
     ]
   },
   "peerDependencies": {
-    "mkdirp": "*"
+    "mkdirp": ">=0.5.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "0.3.1",
