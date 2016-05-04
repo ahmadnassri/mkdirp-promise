@@ -43,7 +43,7 @@
     "mocha": "^2.4.5",
     "rimraf": "^2.5.2",
     "should": "^8.2.2",
-    "standard": "^6.0.8"
+    "standard": "^7.0.1"
   },
   "dependencies": {
     "pinkie-promise": "^2.0.0"
