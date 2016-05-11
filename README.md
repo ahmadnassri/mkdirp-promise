@@ -12,14 +12,14 @@
 
 ## Install
 
-```sh
+```bash
 npm install --save mkdirp-promise
 ```
 
 ## API
 
 ```js
-var mkdirp = require('mkdirp-promise')
+const mkdirp = require('mkdirp-promise')
 ```
 
 ### mkdirp(dir, [, options])
@@ -34,25 +34,21 @@ When it fails, it will be [*rejected*](http://promisesaplus.com/#point-30) with 
 
 ```js
 mkdirp('/tmp/foo/bar/baz')
-  .then(function (made) {
-    console.log(made) //=> '/tmp/foo'
-  })
-
-  .catch(function (err) {
-    console.error(err)
-  })
-})
+  .then(console.log) //=> '/tmp/foo'
+  .catch(console.error)
 ```
 
 #### options
 
 The option object will be directly passed to [mkdirp](https://github.com/substack/node-mkdirp#mkdirpdir-opts-cb).
 
-## License
+----
+> :copyright: [www.ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
+> License: [ISC](LICENSE) &nbsp;&middot;&nbsp;
+> Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
+> Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
-[ISC License](LICENSE) &copy; [Ahmad Nassri](https://www.ahmadnassri.com/)
-
-[license-url]: https://github.com/ahmadnassri/mkdirp-promise/blob/master/LICENSE
+[license-url]: http://choosealicense.com/licenses/isc/
 
 [travis-url]: https://travis-ci.org/ahmadnassri/mkdirp-promise
 [travis-image]: https://img.shields.io/travis/ahmadnassri/mkdirp-promise.svg?style=flat-square

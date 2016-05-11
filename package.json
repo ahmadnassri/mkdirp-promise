@@ -1,10 +1,12 @@
 {
-  "version": "1.0.4",
   "name": "mkdirp-promise",
   "description": "Promise version of mkdirp",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
   "homepage": "https://github.com/ahmadnassri/mkdirp-promise",
-  "repository": "ahmadnassri/mkdirp-promise",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadnassri/mkdirp-promise.git"
+  },
   "license": "ISC",
   "main": "lib/index",
   "keywords": [
@@ -12,40 +14,48 @@
     "promise"
   ],
   "engines": {
-    "node": ">=0.10"
+    "node": ">=4"
   },
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "bugs": {
     "url": "https://github.com/ahmadnassri/mkdirp-promise/issues"
   },
   "scripts": {
-    "pretest": "standard && echint --verbose",
-    "test": "mocha",
-    "posttest": "npm run coverage",
-    "coverage": "istanbul cover --dir coverage _mocha -- -R dot",
-    "codeclimate": "codeclimate-test-reporter < coverage/lcov.info"
+    "test": "tap test/*.js | tap-mocha-reporter spec",
+    "pretest": "standard && echint",
+    "coverage": "tap test/*.js --coverage",
+    "codeclimate": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "standard": {
+    "ignore": [
+      "lib/**"
+    ]
   },
   "echint": {
     "ignore": [
-      "coverage/**"
+      "lib/**"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "peerDependencies": {
     "mkdirp": ">=0.5.0"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "0.3.1",
+    "codeclimate-test-reporter": "^0.3.1",
+    "cz-conventional-changelog": "^1.1.6",
     "echint": "^1.5.3",
-    "istanbul": "^0.4.2",
-    "mkdirp": "^0.5.1",
-    "mocha": "^2.4.5",
-    "rimraf": "^2.5.2",
-    "should": "^8.2.2",
-    "standard": "^7.0.0"
-  },
-  "dependencies": {
-    "pinkie-promise": "^2.0.0"
+    "nyc": "^6.4.4",
+    "semantic-release": "^4.3.5",
+    "standard": "^7.0.1",
+    "tap": "^5.7.1",
+    "tap-mocha-reporter": "0.0.24"
   }
 }

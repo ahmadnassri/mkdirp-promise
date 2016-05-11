@@ -1,50 +1,35 @@
-/* global beforeEach, afterEach, describe, it */
-
 'use strict'
 
-var mkdirp = require('..')
-var path = require('path')
-var rimraf = require('rimraf')
-var mkdir = require('mkdirp')
+const mkdir = require('mkdirp')
+const mkdirp = require('../lib/index')
+const path = require('path')
+const rimraf = require('rimraf')
+const tap = require('tap')
 
-require('should')
+let base = path.join('test', 'tmp')
 
-var base = path.join('test', 'tmp')
+tap.test('mkdirp-promise', (t) => {
+  t.beforeEach((done) => mkdir(base, done))
 
-beforeEach(function (done) {
-  mkdir(base, done)
-})
+  t.afterEach((done) => rimraf(base, done))
 
-afterEach(function (done) {
-  rimraf(base, done)
-})
+  t.plan(3)
 
-describe('node module', function () {
-  it('should successfully create a directory tree', function (done) {
+  t.test('should successfully create a directory tree', (assert) => {
     var x = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
     var y = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
     var z = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
 
     var file = path.join(base, path.join.apply(null, [x, y, z]))
 
-    mkdirp(file).then(function (made) {
-      made.should.equal(path.resolve(path.join(base, x)))
-
-      done()
-    })
+    return mkdirp(file).then((made) => assert.equal(made, path.resolve(path.join(base, x))))
   })
 
-  it('should catch thrown errors', function (done) {
-    mkdirp(true).catch(function (err) {
-      err.should.match(/^TypeError/)
-      done()
-    })
+  t.test('should catch thrown errors', (assert) => {
+    return mkdirp(true).catch((err) => assert.match(err, /^TypeError/))
   })
 
-  it('should catch errors', function (done) {
-    mkdirp(path.join('test', 'index.js', 'foo')).catch(function (err) {
-      err.code.should.equal('ENOTDIR')
-      done()
-    })
+  t.test('should catch errors', (assert) => {
+    return mkdirp(path.join('test', 'index.js', 'foo')).catch((err) => assert.equal(err.code, 'ENOTDIR'))
   })
 })
