@@ -58,5 +58,6 @@
     "standard": "^7.0.1",
     "tap": "^5.7.1",
     "tap-mocha-reporter": "0.0.24"
-  }
+  },
+  "version": "2.0.0"
 }
