@@ -56,7 +56,7 @@
     "rimraf": "^2.5.2",
     "semantic-release": "^4.3.5",
     "standard": "^7.0.1",
-    "tap": "^5.7.1",
+    "tap": "^6.0.0",
     "tap-mocha-reporter": "0.0.27"
   },
   "version": "2.0.0"
