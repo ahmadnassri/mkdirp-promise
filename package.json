@@ -52,7 +52,7 @@
     "codeclimate-test-reporter": "^0.3.1",
     "cz-conventional-changelog": "^1.1.6",
     "echint": "^1.5.3",
-    "nyc": "^7.0.0",
+    "nyc": "^8.0.0",
     "rimraf": "^2.5.2",
     "semantic-release": "^4.3.5",
     "standard": "^7.0.1",
