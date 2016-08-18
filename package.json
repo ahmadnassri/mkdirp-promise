@@ -57,7 +57,7 @@
     "semantic-release": "^4.3.5",
     "standard": "^7.0.1",
     "tap": "^6.2.0",
-    "tap-mocha-reporter": "0.0.27"
+    "tap-mocha-reporter": "2.0.0"
   },
   "version": "2.0.0"
 }
