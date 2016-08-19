@@ -61,6 +61,7 @@
     "codeclimate-test-reporter": "^0.3.3",
     "cz-conventional-changelog": "^1.2.0",
     "echint": "^1.5.3",
+    "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5",
     "standard": "^7.1.2",
     "tap": "^6.3.2",
