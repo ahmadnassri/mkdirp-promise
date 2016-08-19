@@ -3,23 +3,24 @@ sudo: false
 language: node_js
 
 node_js:
-  - 4
-  - 5
-  - 6
+ - 6
+ - 5
+ - 4
 
 cache:
   directories:
     - node_modules
 
-before_script:
-  - npm prune
-
 after_success:
   - curl -Lo travis_after_all.py https://git.io/travis_after_all
   - python travis_after_all.py
-  - export $(cat .to_export_back)
+  - export $(cat .to_export_back) > /dev/null
   - npm run coverage
   - npm run codeclimate
+  - BABEL_ENV=es2015 npm run compile -- -d lib
+  - BABEL_ENV=node4 npm run compile -- -d lib/node4
+  - BABEL_ENV=node5 npm run compile -- -d lib/node5
+  - BABEL_ENV=node6 npm run compile -- -d lib/node6
   - npm run semantic-release
 
 branches:

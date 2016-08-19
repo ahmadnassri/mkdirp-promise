@@ -1,8 +1,6 @@
-'use strict'
+import mkdirp from 'mkdirp'
 
-var mkdirp = require('mkdirp')
-
-module.exports = function (dir, opts) {
+export default function (dir, opts) {
   return new Promise((resolve, reject) => {
     mkdirp(dir, opts, (err, made) => err === null ? resolve(made) : reject(err))
   })

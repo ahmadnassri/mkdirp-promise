@@ -13,7 +13,40 @@
 ## Install
 
 ```bash
-npm install --save mkdirp-promise
+npm install --production --save mkdirp-promise
+```
+
+## Usage
+
+I reccomend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine.
+
+```js
+/*
+ * Node 6
+ * Built using `babel-preset-es2015-node6`
+ */
+const mkdirp-promise = require('mkdirp-promise/lib/node6')
+
+/*
+ * Node 5
+ * Built using `babel-preset-es2015-node5`
+ */
+const mkdirp-promise = require('mkdirp-promise/lib/node5')
+
+/*
+ * Node 4
+ * Built using `babel-preset-es2015-node4`
+ */
+const mkdirp-promise = require('mkdirp-promise/lib/node4')
+
+/*
+ * Node >=0.10 <=0.12
+ * Built using `babel-preset-es2015`
+ * Note: 
+ *   - additional package is required: `babel-runtime`
+ *   - npm install --production --save babel-runtime
+ */
+var mkdirp-promise = require('mkdirp-promise')
 ```
 
 ## API

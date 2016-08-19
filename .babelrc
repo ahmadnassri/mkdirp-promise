@@ -1,0 +1,24 @@
+{
+  "env": {
+    "test": {
+      "presets": ["es2015"],
+      "plugins": []
+    },
+    "es2015": {
+      "presets": ["es2015"],
+      "plugins": ["babel-plugin-add-module-exports", "transform-runtime"]
+    },
+    "node4": {
+      "presets": ["es2015-node4"],
+      "plugins": ["babel-plugin-add-module-exports"]
+    },
+    "node5": {
+      "presets": ["es2015-node5"],
+      "plugins": ["babel-plugin-add-module-exports"]
+    },
+    "node6": {
+      "presets": ["es2015-node5"],
+      "plugins": ["babel-plugin-add-module-exports"]
+    }
+  }
+}
