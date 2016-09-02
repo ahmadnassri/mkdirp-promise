@@ -1,5 +1,6 @@
 {
   "name": "mkdirp-promise",
+  "version": "3.0.1",
   "description": "Promise version of mkdirp",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
   "homepage": "https://github.com/ahmadnassri/mkdirp-promise",
