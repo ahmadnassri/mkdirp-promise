@@ -58,7 +58,7 @@
     "babel-preset-es2015-node5": "^1.2.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-register": "^6.11.6",
-    "codeclimate-test-reporter": "^0.3.3",
+    "codeclimate-test-reporter": "^0.4.0",
     "cz-conventional-changelog": "^1.2.0",
     "echint": "^1.5.3",
     "rimraf": "^2.5.4",
