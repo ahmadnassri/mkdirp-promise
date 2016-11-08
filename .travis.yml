@@ -1,11 +1,20 @@
-sudo: false
-
 language: node_js
 
 node_js:
- - 6
- - 5
  - 4
+ - 5
+ - 6
+ - 7
+
+os:
+  - linux
+  - osx
+
+env:
+  - BABEL_ENV=test
+
+matrix:
+  fast_finish: true
 
 cache:
   directories:
@@ -17,10 +26,10 @@ after_success:
   - export $(cat .to_export_back) > /dev/null
   - npm run coverage
   - npm run codeclimate
-  - BABEL_ENV=es2015 npm run compile -- -d lib
-  - BABEL_ENV=node4 npm run compile -- -d lib/node4
-  - BABEL_ENV=node5 npm run compile -- -d lib/node5
-  - BABEL_ENV=node6 npm run compile -- -d lib/node6
+  - BABEL_ENV=v4 npm run compile -- -d lib
+  - BABEL_ENV=v5 npm run compile -- -d lib/node5
+  - BABEL_ENV=v6 npm run compile -- -d lib/node6
+  - BABEL_ENV=v7 npm run compile -- -d lib/node7
   - npm run semantic-release
 
 branches:

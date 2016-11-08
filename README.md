@@ -18,41 +18,35 @@ npm install --production --save mkdirp-promise
 
 ## Usage
 
-I reccomend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine.
+I recommend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine with any version of Node `>= v4.0` .
 
 ```js
 /*
- * Node 6
- * Built using `babel-preset-es2015-node6`
+ * Node 7
  */
-const mkdirpPromise = require('mkdirp-promise/lib/node6')
+const mkdirp = require('mkdirp-promise/lib/node7')
+
+/*
+ * Node 6
+ */
+const mkdirp = require('mkdirp-promise/lib/node6')
 
 /*
  * Node 5
- * Built using `babel-preset-es2015-node5`
  */
-const mkdirpPromise = require('mkdirp-promise/lib/node5')
+var mkdirp = require('mkdirp-promise/lib/node5')
 
 /*
- * Node 4
- * Built using `babel-preset-es2015-node4`
+ * Node 4 (Default)
+ * Note: additional ES2015 polyfills may be required
  */
-const mkdirpPromise = require('mkdirp-promise/lib/node4')
-
-/*
- * Node >=0.10 <=0.12
- * Built using `babel-preset-es2015`
- * Note: 
- *   - additional package is required: `babel-runtime`
- *   - npm install --production --save babel-runtime
- */
-var mkdirpPromise = require('mkdirp-promise')
+var mkdirp = require('mkdirp-promise')
 ```
 
 ## API
 
 ```js
-const mkdirpPromise = require('mkdirp-promise')
+const mkdirp = require('mkdirp-promise')
 ```
 
 ### mkdirp(dir, [, options])
