@@ -1,5 +1,6 @@
 {
   "name": "mkdirp-promise",
+  "version": "3.0.2",
   "description": "Promise version of mkdirp",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
   "homepage": "https://github.com/ahmadnassri/mkdirp-promise",
@@ -24,7 +25,8 @@
     "url": "https://github.com/ahmadnassri/mkdirp-promise/issues"
   },
   "scripts": {
-    "compile": "babel -q src",
+    "compile": "babel -q src --out-dir lib",
+    "install": "npm run compile",
     "test": "BABEL_ENV=test tap test/*.js --node-arg=--require --node-arg=babel-register | tap-mocha-reporter spec",
     "pretest": "snazzy && echint",
     "coverage": "BABEL_ENV=test tap test/*.js --coverage --nyc-arg=--require --nyc-arg=babel-register",
