@@ -52,7 +52,7 @@
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "0.0.7",
+    "babel-preset-env": "0.0.8",
     "babel-register": "^6.11.6",
     "codeclimate-test-reporter": "^0.4.0",
     "cz-conventional-changelog": "^1.2.0",
