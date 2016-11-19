@@ -14,7 +14,7 @@
 ## Install
 
 ```bash
-npm install --production --save mkdirp-promise
+npm install --only=production --save mkdirp-promise
 ```
 
 ## Usage
@@ -47,8 +47,8 @@ const mkdirp = require('mkdirp-promise')
 
 ### mkdirp(dir, [, options])
 
-*pattern*: `String`  
-*options*: `Object` or `String`  
+*pattern*: `String`
+*options*: `Object` or `String`
 Return: `Object` ([Promise])
 
 When it finishes, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with the first directory made that had to be created, if any.
