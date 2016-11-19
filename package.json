@@ -59,6 +59,7 @@
     "cz-conventional-changelog": "^1.2.0",
     "echint": "^1.5.3",
     "rimraf": "^2.5.4",
+    "nyc": "^9.0.1",
     "semantic-release": "^6.3.2",
     "snazzy": "^5.0.0",
     "tap": "^8.0.1"
