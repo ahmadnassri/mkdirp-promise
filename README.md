@@ -8,6 +8,7 @@
 [![Downloads][npm-downloads]][npm-url]
 [![Code Climate][codeclimate-quality]][codeclimate-url]
 [![Coverage Status][codeclimate-coverage]][codeclimate-url]
+[![Dependency Status][dependencyci-image]][dependencyci-url]
 [![Dependencies][david-image]][david-url]
 
 ## Install
@@ -30,11 +31,6 @@ const mkdirp = require('mkdirp-promise/lib/node7')
  * Node 6
  */
 const mkdirp = require('mkdirp-promise/lib/node6')
-
-/*
- * Node 5
- */
-var mkdirp = require('mkdirp-promise/lib/node5')
 
 /*
  * Node 4 (Default)
@@ -70,8 +66,8 @@ mkdirp('/tmp/foo/bar/baz')
 The option object will be directly passed to [mkdirp](https://github.com/substack/node-mkdirp#mkdirpdir-opts-cb).
 
 ----
-> :copyright: [www.ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
-> License: [ISC](LICENSE) &nbsp;&middot;&nbsp;
+> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
+> License: [ISC][license-url] &nbsp;&middot;&nbsp;
 > Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
@@ -91,6 +87,9 @@ The option object will be directly passed to [mkdirp](https://github.com/substac
 
 [david-url]: https://david-dm.org/ahmadnassri/mkdirp-promise
 [david-image]: https://img.shields.io/david/ahmadnassri/mkdirp-promise.svg?style=flat-square
+
+[dependencyci-url]: https://dependencyci.com/github/ahmadnassri/mkdirp-promise
+[dependencyci-image]: https://dependencyci.com/github/ahmadnassri/mkdirp-promise/badge?style=flat-square
 
 [mkdirp]: https://github.com/substack/node-mkdirp
 [Promise]: http://promisesaplus.com/

@@ -1,4 +1,5 @@
 {
+  "version": "0.0.0-development",
   "name": "mkdirp-promise",
   "description": "Promise version of mkdirp",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
@@ -50,17 +51,17 @@
     "mkdirp": ">=0.5.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.11.4",
+    "babel-cli": "^6.18.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "0.0.7",
-    "babel-register": "^6.11.6",
+    "babel-preset-env": "0.0.8",
+    "babel-register": "^6.18.0",
     "codeclimate-test-reporter": "^0.4.0",
     "cz-conventional-changelog": "^1.2.0",
     "echint": "^1.5.3",
     "rimraf": "^2.5.4",
-    "semantic-release": "^4.3.5",
+    "semantic-release": "^6.3.2",
     "snazzy": "^5.0.0",
-    "tap": "^8.0.0",
+    "tap": "^8.0.1",
     "tap-mocha-reporter": "^3.0.0"
   }
 }
