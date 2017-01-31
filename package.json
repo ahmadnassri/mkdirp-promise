@@ -34,7 +34,7 @@
     "snazzy": "^6.0.0",
     "tap": "^9.0.2"
   },
-  "peerDependencies": {
+  "dependencies": {
     "mkdirp": "*"
   }
 }
