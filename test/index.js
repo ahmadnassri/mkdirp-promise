@@ -6,7 +6,7 @@ const path = require('path')
 const rimraf = require('rimraf')
 const tap = require('tap')
 
-let base = path.join('test', 'tmp')
+const base = path.join('test', 'tmp')
 
 tap.beforeEach(done => mkdir(base, done))
 tap.afterEach(done => rimraf(base, done))
@@ -14,11 +14,11 @@ tap.afterEach(done => rimraf(base, done))
 tap.test('should successfully create a directory tree', assert => {
   assert.plan(1)
 
-  let x = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
-  let y = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
-  let z = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
+  const x = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
+  const y = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
+  const z = Math.floor(Math.random() * Math.pow(16, 4)).toString(16)
 
-  let file = path.join(base, path.join.apply(null, [x, y, z]))
+  const file = path.join(base, path.join.apply(null, [x, y, z]))
 
   return mkdirp(file).then(made => assert.equal(made, path.resolve(path.join(base, x))))
 })
