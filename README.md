@@ -1,15 +1,14 @@
 # mkdirp-promise [![version][npm-version]][npm-url] [![License][license-image]][license-url]
 
+<h1>⚠️ This package is broken and no longer maintained</h1>
+<h2><a href="https://www.npmjs.com/package/mkdirp"><code>mkdirp</code></a> <em>(which this package was wrapping)</em> itself supports promises now, please switch to that</h2>
+<h3>Or, if you're using the latest Node.js version, <code>fs.mkdir</code> also supports <code>recursive</code> mode and <a href="https://nodejs.org/api/fs.html#fs_fspromises_mkdir_path_options">returns promises</a>
+
+---
+
 [Promise] version of [mkdirp]:
 
 > Like mkdir -p, but in node.js!
-
-[![Build Status][travis-image]][travis-url]
-[![Downloads][npm-downloads]][npm-url]
-[![Code Climate][codeclimate-quality]][codeclimate-url]
-[![Coverage Status][codeclimate-coverage]][codeclimate-url]
-[![Dependency Status][dependencyci-image]][dependencyci-url]
-[![Dependencies][david-image]][david-url]
 
 ## Install
 
